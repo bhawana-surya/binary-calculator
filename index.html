@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Binary Calculator</h1>
+            <p>Computer Organization Mini Project</p>
+        </header>
+
+        <section class="calculator">
+            <div class="input-group">
+                <label for="num1">First Binary Number</label>
+                <input type="text" id="num1" placeholder="Example: 1010" inputmode="numeric" autocomplete="off">
+            </div>
+
+            <div class="input-group">
+                <label for="operation">Select Operation</label>
+                <select id="operation">
+                    <option value="add">Addition (+)</option>
+                    <option value="subtract">Subtraction (-)</option>
+                    <option value="multiply">Multiplication (×)</option>
+                    <option value="divide">Division (÷)</option>
+                    <option value="and">AND (&amp;)</option>
+                    <option value="or">OR (|)</option>
+                    <option value="xor">XOR (^)</option>
+                    <option value="not">NOT (~)</option>
+                </select>
+            </div>
+
+            <div class="input-group" id="secondInput">
+                <label for="num2">Second Binary Number</label>
+                <input type="text" id="num2" placeholder="Example: 1100" inputmode="numeric" autocomplete="off">
+            </div>
+
+            <div class="buttons">
+                <button id="calculateBtn" type="button">Calculate</button>
+                <button id="clearBtn" class="clear" type="button">Clear</button>
+            </div>
+
+            <p id="error" class="error" role="alert" aria-live="polite"></p>
+
+            <section class="result-box" aria-live="polite">
+                <h2>Result</h2>
+                <div class="result-item"><span>Binary</span><strong id="binaryResult">---</strong></div>
+                <div class="result-item"><span>Decimal</span><strong id="decimalResult">---</strong></div>
+                <div class="result-item"><span>Hexadecimal</span><strong id="hexResult">---</strong></div>
+            </section>
+
+            <section class="steps-box">
+                <h2>Calculation Steps</h2>
+                <p id="steps">Enter binary numbers to start.</p>
+            </section>
+        </section>
+
+        <footer>Made using HTML, CSS and JavaScript</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
